@@ -11,3 +11,10 @@ h1 {
 
 h2 {
 }
+
+p {
+  font-family: mr-eaves-sans, sans-serif;
+  color: red;
+  font-weight: 300;
+  font-style: normal;
+}
