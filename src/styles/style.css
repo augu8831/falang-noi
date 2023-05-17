@@ -3,6 +3,9 @@ body {
 }
 
 h1 {
+  font-family: "ivyepic", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h2 {
