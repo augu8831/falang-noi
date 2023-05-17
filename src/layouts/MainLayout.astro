@@ -1,8 +1,8 @@
 ---
 const { title } = Astro.props;
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../style.css/";
+// import Header from "../components/Header.astro";
+// import Footer from "../components/Footer.astro";
+import "../styles/style.css/";
 ---
 
 <html lang="da">
@@ -15,9 +15,9 @@ import "../style.css/";
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <!-- <Header /> -->
     <h2>{title}</h2>
     <slot />
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>
