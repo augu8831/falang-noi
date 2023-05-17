@@ -1,10 +1,11 @@
 body {
   background-color: #ffc8a8;
+  /* color: #dbff01; */
 }
 
 h1 {
   font-family: "ivyepic", sans-serif;
-  color: red;
+  color: #ff2f01;
   font-weight: 600;
   font-style: normal;
 }
@@ -14,7 +15,7 @@ h2 {
 
 p {
   font-family: mr-eaves-sans, sans-serif;
-  color: red;
+  color: #ff2f01;
   font-weight: 300;
   font-style: normal;
 }
