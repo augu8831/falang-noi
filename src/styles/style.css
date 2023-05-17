@@ -1,3 +1,11 @@
+* {
+  --primary: #ff2f01;
+  --secondary: #dbff01;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #ffc8a8;
   /* color: #dbff01; */
@@ -5,17 +13,18 @@ body {
 
 h1 {
   font-family: "ivyepic", sans-serif;
-  color: #ff2f01;
+  color: var(--primary);
   font-weight: 600;
   font-style: normal;
 }
 
 h2 {
+  color: var(--primary);
 }
 
 p {
   font-family: mr-eaves-sans, sans-serif;
-  color: #ff2f01;
+  color: var(--primary);
   font-weight: 300;
   font-style: normal;
 }
