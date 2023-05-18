@@ -1,56 +1,29 @@
 <footer>
-  <div>
-    <button></button>
-    <button></button>
-  </div>
+  <div class="line"></div>
   <nav>
-    <div class="icons">
-      <ul class="ulicons">
-        <li><a href="#" class="fa fa-facebook"></a></li>
-        <li><a href="#" class="fa fa-instagram"></a></li>
-      </ul>
-    </div>
-
-    <p>ⓒ NANNA MALUMGON</p>
-
-    <button>DA</button>
+    <span class="text">ⓒ NANNA MALUMGON</span>
+    <span class="button"><button>DA</button></span>
   </nav>
-
-  <style></style>
 </footer>
 
 <style>
-  li {
-    list-style-type: none;
+  .line {
+    background-color: var(--primary);
+    height: 2px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0 20px;
+  }
+
+  .text {
+    color: var(--primary);
   }
 
   nav {
-    display: flex;
-    flex-direction: row;
-    margin: 2rem;
+    margin: 30px;
+    text-align: center;
   }
 
-  a {
-    text-decoration: none;
-  }
-
-  .minnav ul {
-    gap: 10px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .icons ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    list-style: none;
-  }
-
-  .ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .button {
   }
 </style>
