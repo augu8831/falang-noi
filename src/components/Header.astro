@@ -2,6 +2,7 @@
   <nav>
     <div class="icons">
       <ul class="ulicons">
+        <li><a href="#" class="fa fa-tiktok"></a></li>
         <li><a href="#" class="fa fa-facebook"></a></li>
         <li><a href="#" class="fa fa-instagram"></a></li>
       </ul>
@@ -26,15 +27,16 @@
   nav {
     display: flex;
     flex-direction: row;
-    margin: 2rem;
+    margin: 1.5rem;
   }
 
   a {
     text-decoration: none;
+    color: var(--primary);
   }
 
   .minnav ul {
-    gap: 10px;
+    gap: 1rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -43,14 +45,34 @@
   .icons ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
     list-style: none;
   }
 
   .ul {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    flex-direction: row;
+  }
+  .fa {
+    font-size: 1.4rem;
+  }
+  .fa-instagram {
+    color: var(--primary);
+  }
+  .fa-facebook {
+    color: var(--primary);
+  }
+
+  .fa-tiktok {
+    color: var(--primary);
   }
 
   @media (min-width: 800px) {
