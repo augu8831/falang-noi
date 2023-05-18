@@ -4,26 +4,85 @@
     <span class="text">ⓒ NANNA MALUMGON</span>
     <span class="button"><button>DA</button></span>
   </nav>
+  <div class="icons">
+    <ul class="ulicons">
+      <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
+      <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+      <li><i class="fa-brands fa-tiktok"></i></li>
+    </ul>
+  </div>
+  <div></div>
+
+  <style>
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      font-family: "ivyepic", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .icons ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .fa-brands {
+      font-size: 1.4rem;
+    }
+    .fa-instagram {
+      color: var(--primary);
+    }
+    .fa-facebook-f {
+      color: var(--primary);
+    }
+
+    .fa-tiktok {
+      color: var(--primary);
+    }
+
+    @media (min-width: 800px) {
+      .icons ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+      }
+
+      .fa-brands {
+        font-size: 1.5rem;
+      }
+      .fa-instagram {
+        color: var(--primary);
+      }
+      .fa-facebook-f {
+        color: var(--primary);
+      }
+
+      .fa-tiktok {
+        color: var(--primary);
+      }
+    }
+    .line {
+      background-color: var(--primary);
+      height: 2px;
+      margin-left: 40px;
+      margin-right: 40px;
+      padding: 0 20px;
+    }
+
+    .text {
+      color: var(--primary);
+    }
+
+    nav {
+      margin: 30px;
+      text-align: center;
+    }
+
+    .button {
+    }
+  </style>
 </footer>
-
-<style>
-  .line {
-    background-color: var(--primary);
-    height: 2px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 0 20px;
-  }
-
-  .text {
-    color: var(--primary);
-  }
-
-  nav {
-    margin: 30px;
-    text-align: center;
-  }
-
-  .button {
-  }
-</style>
