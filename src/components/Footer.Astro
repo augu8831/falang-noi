@@ -1,19 +1,25 @@
 <footer>
   <div class="line"></div>
   <nav>
-    <span class="text">ⓒ NANNA MALUMGON</span>
-    <span class="button"><button>DA</button></span>
+    <div class="icons">
+      <ul class="ulicons">
+        <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
+        <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+        <li><i class="fa-brands fa-tiktok"></i></li>
+      </ul>
+    </div>
+    <div><span class="text">ⓒ NANNA MALUMGON</span></div>
+    <div><button class="button">DA</button></div>
   </nav>
-  <div class="icons">
-    <ul class="ulicons">
-      <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
-      <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
-      <li><i class="fa-brands fa-tiktok"></i></li>
-    </ul>
-  </div>
-  <div></div>
 
   <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 30px;
+    }
     a {
       text-decoration: none;
       color: var(--primary);
@@ -24,13 +30,13 @@
 
     .icons ul {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      flex-direction: row;
+      gap: 0.5rem;
       list-style: none;
     }
 
     .fa-brands {
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
     .fa-instagram {
       color: var(--primary);
@@ -43,7 +49,45 @@
       color: var(--primary);
     }
 
+    .line {
+      background-color: var(--primary);
+      height: 2px;
+      margin-left: 40px;
+      margin-right: 40px;
+      padding: 0 20px;
+    }
+
+    .text {
+      color: var(--primary);
+      font-family: mr-eaves-sans, sans-serif;
+      color: var(--primary);
+      font-weight: 300;
+      font-style: normal;
+      font-size: 0.8rem;
+    }
+
+    .button {
+      border: none;
+      background-color: transparent;
+      display: inline-block;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 0.8rem;
+      padding: 4px;
+      font-family: mr-eaves-sans, sans-serif;
+      color: var(--primary);
+      font-weight: 300;
+      font-style: normal;
+    }
+
     @media (min-width: 800px) {
+      nav {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+      }
       .icons ul {
         display: flex;
         flex-direction: row;
@@ -64,25 +108,29 @@
       .fa-tiktok {
         color: var(--primary);
       }
-    }
-    .line {
-      background-color: var(--primary);
-      height: 2px;
-      margin-left: 40px;
-      margin-right: 40px;
-      padding: 0 20px;
-    }
 
-    .text {
-      color: var(--primary);
-    }
+      .button {
+        border: none;
+        background-color: transparent;
+        display: inline-block;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 1rem;
+        padding: 4px;
+        font-family: mr-eaves-sans, sans-serif;
+        color: var(--primary);
+        font-weight: 300;
+        font-style: normal;
+      }
 
-    nav {
-      margin: 30px;
-      text-align: center;
-    }
-
-    .button {
+      .text {
+        color: var(--primary);
+        font-family: mr-eaves-sans, sans-serif;
+        color: var(--primary);
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1rem;
+      }
     }
   </style>
 </footer>
