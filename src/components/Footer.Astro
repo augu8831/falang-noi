@@ -11,8 +11,76 @@
     <div><span class="text">ⓒ NANNA MALUMGON</span></div>
     <div><button class="button">DA</button></div>
   </nav>
+</footer>
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+  }
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    font-family: "ivyepic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
 
-  <style>
+  .icons ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .fa-brands {
+    font-size: 1rem;
+  }
+  .fa-instagram {
+    color: var(--primary);
+  }
+  .fa-facebook-f {
+    color: var(--primary);
+  }
+
+  .fa-tiktok {
+    color: var(--primary);
+  }
+
+  .line {
+    background-color: var(--primary);
+    height: 2px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0 20px;
+  }
+
+  .text {
+    color: var(--primary);
+    font-family: mr-eaves-sans, sans-serif;
+    color: var(--primary);
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+  }
+
+  .button {
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    padding: 4px;
+    font-family: mr-eaves-sans, sans-serif;
+    color: var(--primary);
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @media (min-width: 800px) {
     nav {
       display: flex;
       justify-content: space-between;
@@ -20,23 +88,15 @@
       margin-right: 50px;
       margin-top: 30px;
     }
-    a {
-      text-decoration: none;
-      color: var(--primary);
-      font-family: "ivyepic", sans-serif;
-      font-weight: 600;
-      font-style: normal;
-    }
-
     .icons ul {
       display: flex;
       flex-direction: row;
-      gap: 0.5rem;
+      gap: 1rem;
       list-style: none;
     }
 
     .fa-brands {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     .fa-instagram {
       color: var(--primary);
@@ -49,12 +109,18 @@
       color: var(--primary);
     }
 
-    .line {
-      background-color: var(--primary);
-      height: 2px;
-      margin-left: 40px;
-      margin-right: 40px;
-      padding: 0 20px;
+    .button {
+      border: none;
+      background-color: transparent;
+      display: inline-block;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1rem;
+      padding: 4px;
+      font-family: mr-eaves-sans, sans-serif;
+      color: var(--primary);
+      font-weight: 300;
+      font-style: normal;
     }
 
     .text {
@@ -63,74 +129,7 @@
       color: var(--primary);
       font-weight: 300;
       font-style: normal;
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
-
-    .button {
-      border: none;
-      background-color: transparent;
-      display: inline-block;
-      text-align: center;
-      text-decoration: underline;
-      font-size: 0.8rem;
-      padding: 4px;
-      font-family: mr-eaves-sans, sans-serif;
-      color: var(--primary);
-      font-weight: 300;
-      font-style: normal;
-    }
-
-    @media (min-width: 800px) {
-      nav {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 30px;
-      }
-      .icons ul {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        list-style: none;
-      }
-
-      .fa-brands {
-        font-size: 1.5rem;
-      }
-      .fa-instagram {
-        color: var(--primary);
-      }
-      .fa-facebook-f {
-        color: var(--primary);
-      }
-
-      .fa-tiktok {
-        color: var(--primary);
-      }
-
-      .button {
-        border: none;
-        background-color: transparent;
-        display: inline-block;
-        text-align: center;
-        text-decoration: underline;
-        font-size: 1rem;
-        padding: 4px;
-        font-family: mr-eaves-sans, sans-serif;
-        color: var(--primary);
-        font-weight: 300;
-        font-style: normal;
-      }
-
-      .text {
-        color: var(--primary);
-        font-family: mr-eaves-sans, sans-serif;
-        color: var(--primary);
-        font-weight: 300;
-        font-style: normal;
-        font-size: 1rem;
-      }
-    }
-  </style>
-</footer>
+  }
+</style>
