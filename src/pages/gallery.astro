@@ -1,79 +1,47 @@
 ---
-// import GalleryBox from "../components/GalleryBox.astro";
-// import SiteHeader from "../components/SiteHeader.astro";
+import GalleryBox from "../components/GalleryBox.astro";
+import SiteHeader from "../components/SiteHeader.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co", {
+
+const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co/rest/v1/gallery", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyZm1mbm13bmx0a21ubHdoY2l3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ0MDYzNDgsImV4cCI6MTk5OTk4MjM0OH0.V3uFzN9XdkUcR0J0uVy7DJG-lYVXGe84JyIA1YqJ3VQ",
   },
 }).then((res) => res.json());
 
+console.log(data);
 ---
 
-<MainLayout title="Gallery">
+<MainLayout>
   <h2>Gallery</h2>
   <section class="galleryBox">
-    <div class="slideshow-container">
-      <div class="galleryImg slide">
-        <img src="public/img/falang-noi-marken.webp" alt="Slide 1 - Marken" />
-      </div>
-      <div class="galleryImg slide">
-        <img src="public/img/falang-noi-marken.webp" alt="Slide 2 - Marken" />
-      </div>
-    </div>
-    <h3>RISMARKEN</h3>
+    {
+      data.map((galleryData) => {
+        return;
+        <GalleryBox data={galleryData} />;
+      })
+    }
   </section>
 </MainLayout>
 
 <style>
-  .galleryBox {
-    border-color: (var) --secondary;
+  main {
+    max-width: 1500px;
+  }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    ...;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
   }
 
-  .slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    ...;
   }
-
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: opacity: 0.5 ease-in-out;
-  }
-
-  .slide.active {
-    opacity: 1;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
   }
 </style>
-
-<script>
-  var slides = document.querySelector('.slide');
-  var currentSlide = 0;
-
-  function showSlide(slideIndex) {
-    slides[currentSlide].classList.remove('active');
-    slides[slideIndex].classList.add('active');
-    currentSlide = slideIndex;
-  }
-
-  function nextSlide() {
-    var nextSlideIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextSlideIndex);
-  }
-
-  // Automatically advance to the next slide every 5 seconds
-  setInterval(nextSlide, 5000);
-</script>
