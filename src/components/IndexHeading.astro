@@ -1,17 +1,11 @@
-
-
-
 <div class="indexheading">
-    <div class="heading1"><h1>FALANG</h1><h3>ฝรั่งน้อย</h3></div>
-    <div class="heading2"><h1>NOI</h1></div>
-    <!-- <div class="heading3"><h3>ฝรั่งน้อย</h3></div> -->
-  </div>
+  <div class="heading1"><h1>FALANG</h1><h3>ฝรั่งน้อย</h3></div>
+  <div class="heading2"><h1>NOI</h1></div>
+  <!-- <div class="heading3"><h3>ฝรั่งน้อย</h3></div> -->
+</div>
 
-
-  
 <style>
-@media only screen and (max-width: 600px) {
-    h1 {
+  h1 {
     font-family: "ivyepic", sans-serif;
     color: var(--primary);
     font-weight: 600;
@@ -33,9 +27,10 @@
   }
 
   .indexheading {
-    position:relative;
+    position: relative;
     top: -16rem;
-    left: 40px ;
+    left: 40px;
+    padding-top: 0;
   }
 
   .heading1 {
@@ -52,74 +47,271 @@
     position: relative;
     line-height: 10rem;
     top: 18rem;
-    left:-6px;
+    left: -6px;
   }
 
   .heading2 h1 {
     position: relative;
     top: -120px;
     left: 40px;
+    line-height: 9rem;
+  }
+  @media only screen and (max-width: 800px) {
+    h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 8rem;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 2rem;
+      line-height: 0;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .indexheading {
+      position: relative;
+      top: -16rem;
+      left: 40px;
+      padding-top: 0;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading1 h1 {
+      line-height: 1rem;
+    }
+
+    .heading1 h3 {
+      position: relative;
+      line-height: 10rem;
+      top: 18rem;
+      left: -6px;
+    }
+
+    .heading2 h1 {
+      position: relative;
+      top: -120px;
+      left: 40px;
+      line-height: 9rem;
+    }
+  }
+  /* @media only screen and (max-width: 600px) {
+    h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 8rem;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 2rem;
+      line-height: 0;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .indexheading {
+      position: relative;
+      top: -16rem;
+      left: 40px;
+      padding-top: 0;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading1 h1 {
+      line-height: 1rem;
+    }
+
+    .heading1 h3 {
+      position: relative;
+      line-height: 10rem;
+      top: 18rem;
+      left: -6px;
+    }
+
+    .heading2 h1 {
+      position: relative;
+      top: -120px;
+      left: 40px;
+      line-height: 9rem;
+    }
+  } */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* @media only screen and (min-width: 768px) {
+    h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 11rem;
+      writing-mode:horizontal-tb;
+    }
+
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 2rem;
+      line-height: 0;
+      writing-mode:horizontal-tb;
+    }
+
+    .indexheading {
+      display: flex;
+      flex-direction: column;
+      padding-top: 27rem;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading1 h1 {
+      line-height: 0;
+    }
+
+    .heading1 h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 2rem;
+    }
+
+    .heading2 h1 {
+      display: flex;
+      justify-content: flex-end;
+      line-height: 14rem;
+    }
   }
 
-}
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 900px) {
+    h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 14rem;
+      writing-mode: unset;
+      text-orientation: unset;
+    }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 2rem;
+      line-height: 0;
+      writing-mode: unset;
+      text-orientation: unset;
+    }
 
-  h1 {
-    font-family: "ivyepic", sans-serif;
-    color: var(--primary);
-    font-weight: 600;
-    font-style: normal;
-    font-size: 18rem;
+    .indexheading {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20rem;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading1 h1 {
+      line-height: 0;
+    }
+
+    .heading1 h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 10rem;
+    }
+
+    .heading2 h1 {
+      display: flex;
+      justify-content: flex-end;
+      line-height: 0;
+    }
   }
+  */
 
-  h3 {
-    font-family: "ivyepic", sans-serif;
-    color: var(--secondary);
-    font-weight: 200;
-    font-style: normal;
-    font-size: 4rem;
-    line-height: 0;
+  @media only screen and (min-width: 1200px) /* Extra large devices (large laptops and desktops, 1200px and up) */ {
+    /* h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18rem;
+    }
+
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 3.5rem;
+      line-height: 0;
+    }
+
+    .indexheading {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20.5rem;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading1 h1 {
+      line-height: 0;
+    }
+
+    .heading1 h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 6rem;
+    }
+
+    .heading2 h1 {
+      display: flex;
+      justify-content: flex-end;
+      line-height: 15rem;
+    } */
   }
-
-  .indexheading {
-    display: flex;
-    flex-direction: column;
-    padding-top: 20.5rem;
-  }
-
-  .heading1 {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .heading1 h1 {
-    line-height: 0;
-  }
-
-  .heading1 h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    line-height: 6rem;
-  }
-
-  .heading2 h1 {
-    display: flex;
-    justify-content: flex-end;
-    line-height: 18rem;
-  }
-}
- 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-
-@media only screen and (min-width: 1200px) /* Extra large devices (large laptops and desktops, 1200px and up) */ {
-  --
-}
-
 </style>
