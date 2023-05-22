@@ -17,15 +17,17 @@ console.log(data);
   <h2>Gallery</h2>
   <section class="galleryBox">
     {
-      data.map((galleryData) => {
-        return;
-        <GalleryBox data={galleryData} />;
+      data.map((show) => {
+        return <GalleryBox data={show} />;
       })
     }
   </section>
 </MainLayout>
 
 <style>
+  .galleryBox {
+    border-color: var(--secondary);
+  }
   main {
     max-width: 1500px;
   }
