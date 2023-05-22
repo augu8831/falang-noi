@@ -14,8 +14,9 @@ console.log(data);
 ---
 
 <MainLayout>
-  <h2>Gallery</h2>
-  <section class="galleryBox">
+  <h1>Gallery</h1>
+
+  <section>
     {
       data.map((show) => {
         return <GalleryBox data={show} />;
@@ -25,9 +26,6 @@ console.log(data);
 </MainLayout>
 
 <style>
-  .galleryBox {
-    border-color: var(--secondary);
-  }
   main {
     max-width: 1500px;
   }

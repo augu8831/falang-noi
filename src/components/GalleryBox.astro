@@ -3,8 +3,87 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-<article>
-  <h2>{data.title}</h2>
-  <img src="/img/gallery/rismarken.webp" alt="" />
-  <p>{data.description}</p>
-</article>
+<div class="yellow"></div>
+
+<section class="galleryBox">
+  <h2 class="title">{data.title}</h2>
+  <div class="imgBox">
+    <img class="imgHover" src="/img/gallery/marken.webp" alt="" />
+    <div class="hide">
+      <p class="description">{data.description}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .yellow {
+    border: 3px solid var(--secondary);
+    position: absolute;
+    height: 450px;
+    width: 600px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .galleryBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px; /*Udligne at den er blevet rykket med H2 */
+  }
+
+  .imgBox {
+    position: relative;
+  }
+  .hide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+  }
+
+  .imgBox:hover .hide {
+    display: block;
+    opacity: 1;
+  }
+
+  .imgHover:hover {
+    opacity: 20%;
+  }
+  /* Evt lave et billede der har lav opacity istedet?? */
+
+  /* .description:hover .imgHover {
+    opacity: 20%;
+    FORSØG PÅ AT FÅ DET MED TEKST OG BILLEDE TIL AT DU!
+  } */
+
+  img {
+    width: 470px;
+    height: auto;
+  }
+  .title {
+    padding-top: 150px;
+    padding-right: 8px;
+    writing-mode: vertical-rl; /* Rotates the text vertically in the opposite direction */
+    text-orientation: mixed; /* Sets the orientation of the text */
+    white-space: nowrap; /* Prevents the text from wrapping */
+  }
+</style>
+
+<script>
+  let bild = document.querySelector(".imgHover");
+  let text = document.querySelector(".description");
+
+  text.addEventListener("click", opacity());
+  bild.addEventListener("click", opacity());
+
+  function opacity() {
+    console.log("mus");
+    /*Gøre så det kun er img der har 50%?? */
+  }
+</script>
