@@ -4,13 +4,14 @@ import Footer from "../components/Footer.astro";
 import "../styles/style.css";
 ---
 
-<html lang="da">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://use.typekit.net/onl5kxo.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -19,30 +20,59 @@ import "../styles/style.css";
   <body>
     <main>
       <Header />
-      <!-- <h2>{title}</h2> -->
       <slot />
       <Footer />
     </main>
   </body>
 </html>
 
+<script>
+  let slider = tns({
+    container: ".my-slider",
+    "slide-By": 1,
+    speed: 400,
+    nav: false,
+    controlsContainer: "#control",
+    prevButton: ".preivous",
+    nextButton: ".next",
+    responsive: {
+      1600: {
+        items: 4,
+        gutter: 20,
+      },
+
+      1024: {
+        items: 3,
+        gutter: 20,
+      },
+
+      768: {
+        items: 2,
+        gutter: 20,
+      },
+
+      450: {
+        items: 1,
+      },
+    },
+  });
+</script>
+
 <style>
   main {
     max-width: 1500px;
   }
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     ...;
   }
   /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
+  /* @media only screen and (min-width: 768px) {
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    ...;
-  }
+  /* @media only screen and (min-width: 992px) { */
+
   /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-  }
+  /* @media only screen and (min-width: 1200px) { */
 </style>
