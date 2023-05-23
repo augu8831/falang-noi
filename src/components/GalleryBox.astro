@@ -3,12 +3,10 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-<div class="yellow"></div>
-
 <section class="galleryBox">
   <h2 class="title">{data.title}</h2>
   <div class="imgBox">
-    <img class="imgHover" src="/img/gallery/marken.webp" alt="" />
+    <img class="imgHover" src={"img/gallery/" + data.image} alt="Falang Noi Galleri" />
     <div class="hide">
       <p class="description">{data.description}</p>
     </div>
@@ -16,15 +14,7 @@ console.log(data);
 </section>
 
 <style>
-  .yellow {
-    border: 3px solid var(--secondary);
-    position: absolute;
-    height: 450px;
-    width: 600px;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  .galleryBox:nth-child(0) {
   }
   .galleryBox {
     display: flex;
@@ -42,8 +32,6 @@ console.log(data);
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
     display: none;
   }
 
@@ -54,13 +42,8 @@ console.log(data);
 
   .imgHover:hover {
     opacity: 20%;
+    transition: opacity 0.2s ease-in-out;
   }
-  /* Evt lave et billede der har lav opacity istedet?? */
-
-  /* .description:hover .imgHover {
-    opacity: 20%;
-    FORSØG PÅ AT FÅ DET MED TEKST OG BILLEDE TIL AT DU!
-  } */
 
   img {
     width: 470px;
@@ -76,14 +59,30 @@ console.log(data);
 </style>
 
 <script>
-  let bild = document.querySelector(".imgHover");
-  let text = document.querySelector(".description");
+  // Hover effekt på billede/img samt tekst/description
+  const imgHover = document.querySelector(".imgHover");
+  const description = document.querySelector(".description");
 
-  text.addEventListener("click", opacity());
-  bild.addEventListener("click", opacity());
+  function handleHover() {
+    imgHover.style.opacity = "20%";
+    console.log(handleHover);
+  }
 
-  function opacity() {
-    console.log("mus");
-    /*Gøre så det kun er img der har 50%?? */
+  function handleMouseOut() {
+    imgHover.style.opacity = "100%";
+    console.log(handleMouseOut);
+  }
+
+  imgHover.addEventListener("mouseover", handleHover);
+  imgHover.addEventListener("mouseout", handleMouseOut);
+  description.addEventListener("mouseover", handleHover);
+  description.addEventListener("mouseout", handleMouseOut);
+
+  // Slideshow :'((
+
+  const slideshow = document.querySelector(".galleryBox:nth-child()");
+
+  function slideShow() {
+    slideshow.addEventListener("click");
   }
 </script>
