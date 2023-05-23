@@ -28,7 +28,7 @@
 
   .indexheading {
     position: relative;
-    top: -16rem;
+    top: -250px;
     left: 40px;
     padding-top: 0;
   }
@@ -54,17 +54,18 @@
     position: relative;
     top: -120px;
     left: 40px;
-    line-height: 9rem;
+    padding-top: 0rem;
   }
-  @media only screen and (max-width: 800px) {
+
+  @media only screen and (min-width: 768px) {
     h1 {
       font-family: "ivyepic", sans-serif;
       color: var(--primary);
       font-weight: 600;
       font-style: normal;
-      font-size: 8rem;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+      font-size: 10rem;
+      writing-mode: unset;
+      text-orientation: unset;
     }
 
     h3 {
@@ -74,15 +75,15 @@
       font-style: normal;
       font-size: 2rem;
       line-height: 0;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+      writing-mode: unset;
+      text-orientation: unset;
     }
 
     .indexheading {
-      position: relative;
-      top: -16rem;
-      left: 40px;
-      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 35rem;
+      left: 5px;
     }
 
     .heading1 {
@@ -92,24 +93,85 @@
     }
 
     .heading1 h1 {
-      line-height: 1rem;
+      line-height: 0;
     }
 
     .heading1 h3 {
-      position: relative;
-      line-height: 10rem;
-      top: 18rem;
-      left: -6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      line-height: 0;
+      padding-top: 1.3rem;
+    top: 0;
+    left: 0:;
     }
 
     .heading2 h1 {
-      position: relative;
-      top: -120px;
-      left: 40px;
-      line-height: 9rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+      line-height: 26rem;
+      padding-top: 2.5rem;
+    left: -30px;
     }
   }
-  /* @media only screen and (max-width: 600px) {
+
+  @media only screen and (min-width: 992px) {
+    h1 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18rem;
+      writing-mode: unset;
+      text-orientation: unset;
+    }
+
+    h3 {
+      font-family: "ivyepic", sans-serif;
+      color: var(--secondary);
+      font-weight: 200;
+      font-style: normal;
+      font-size: 3.5rem;
+      line-height: 0;
+      writing-mode: unset;
+      text-orientation: unset;
+    }
+
+    .indexheading {
+      position: unset;
+      display: flex;
+      flex-direction: column;
+      padding-top: 24rem;
+    }
+
+    .heading1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .heading1 h1 {
+      line-height: 0;
+    }
+
+    .heading1 h3 {
+      position: unset;
+      display: flex;
+      flex-direction: column;
+      line-height: 4rem;
+    }
+
+    .heading2 h1 {
+      position: unset;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      line-height: 200px;
+    }
+  }
+  /* @media only screen and (min-width: 550px) {
     h1 {
       font-family: "ivyepic", sans-serif;
       color: var(--primary);
@@ -133,7 +195,7 @@
 
     .indexheading {
       position: relative;
-      top: -16rem;
+      top: -250px;
       left: 40px;
       padding-top: 0;
     }
@@ -162,156 +224,7 @@
       line-height: 9rem;
     }
   } */
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* @media only screen and (min-width: 768px) {
-    h1 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--primary);
-      font-weight: 600;
-      font-style: normal;
-      font-size: 11rem;
-      writing-mode:horizontal-tb;
-    }
+  /* @media only screen and (min-width: 900px) {
 
-    h3 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--secondary);
-      font-weight: 200;
-      font-style: normal;
-      font-size: 2rem;
-      line-height: 0;
-      writing-mode:horizontal-tb;
-    }
-
-    .indexheading {
-      display: flex;
-      flex-direction: column;
-      padding-top: 27rem;
-    }
-
-    .heading1 {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-
-    .heading1 h1 {
-      line-height: 0;
-    }
-
-    .heading1 h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      line-height: 2rem;
-    }
-
-    .heading2 h1 {
-      display: flex;
-      justify-content: flex-end;
-      line-height: 14rem;
-    }
-  }
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 900px) {
-    h1 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--primary);
-      font-weight: 600;
-      font-style: normal;
-      font-size: 14rem;
-      writing-mode: unset;
-      text-orientation: unset;
-    }
-
-    h3 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--secondary);
-      font-weight: 200;
-      font-style: normal;
-      font-size: 2rem;
-      line-height: 0;
-      writing-mode: unset;
-      text-orientation: unset;
-    }
-
-    .indexheading {
-      display: flex;
-      flex-direction: column;
-      padding-top: 20rem;
-    }
-
-    .heading1 {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-
-    .heading1 h1 {
-      line-height: 0;
-    }
-
-    .heading1 h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      line-height: 10rem;
-    }
-
-    .heading2 h1 {
-      display: flex;
-      justify-content: flex-end;
-      line-height: 0;
-    }
-  }
-  */
-
-  @media only screen and (min-width: 1200px) /* Extra large devices (large laptops and desktops, 1200px and up) */ {
-    /* h1 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--primary);
-      font-weight: 600;
-      font-style: normal;
-      font-size: 18rem;
-    }
-
-    h3 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--secondary);
-      font-weight: 200;
-      font-style: normal;
-      font-size: 3.5rem;
-      line-height: 0;
-    }
-
-    .indexheading {
-      display: flex;
-      flex-direction: column;
-      padding-top: 20.5rem;
-    }
-
-    .heading1 {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-
-    .heading1 h1 {
-      line-height: 0;
-    }
-
-    .heading1 h3 {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      line-height: 6rem;
-    }
-
-    .heading2 h1 {
-      display: flex;
-      justify-content: flex-end;
-      line-height: 15rem;
-    } */
-  }
+  } */
 </style>
