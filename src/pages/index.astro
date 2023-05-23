@@ -1,6 +1,6 @@
 ---
 // import IndexGallery from "../components/IndexGallery.astro";
-import IndexGallery2 from "../components/IndexGallery2.astro";
+import IndexGallery from "../components/IndexGallery.astro";
 import IndexAboutSection from "../components/IndexAboutSection.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import IndexHeading from "../components/IndexHeading.astro";
@@ -9,10 +9,19 @@ import IndexHeading from "../components/IndexHeading.astro";
 
 <MainLayout>
   <IndexHeading />
-  <IndexGallery2 />
+  <IndexGallery />
   <IndexAboutSection />
 </MainLayout>
 
 <!-- <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
 
-<style></style>
+<style>
+  * {
+    --primary: #ff2f01;
+    --secondary: #dbff01;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ivyepic", sans-serif;
+  }
+</style>
