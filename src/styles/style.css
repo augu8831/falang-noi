@@ -20,6 +20,7 @@ h1 {
 
 h2 {
   color: var(--primary);
+  font-family: mr-eaves-sans, sans-serif;
 }
 
 p {
