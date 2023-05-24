@@ -1,0 +1,41 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<div class="container">
+  <section class="one">
+    <h2>title</h2>
+  </section>
+  <section class="two">
+    <h1>second page</h1>
+  </section>
+  <section class="three">
+    <h1>third page</h1>
+  </section>
+</div>
+
+<style>
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: start;
+  }
+
+  .one {
+    background-color: aqua;
+  }
+  .two {
+    background-color: bisque;
+  }
+  .three {
+    background-color: brown;
+  }
+</style>

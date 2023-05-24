@@ -1,5 +1,6 @@
 ---
 import GalleryBox from "../components/GalleryBox.astro";
+import GalleryBox2 from "../components/GalleryBox2.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
@@ -16,6 +17,8 @@ console.log(data);
 <MainLayout>
   <h1>Gallery</h1>
 
+  <!-- <GalleryBox2 /> -->
+
   <div class="yellow"></div>
   <section class="test">
     {
@@ -28,7 +31,7 @@ console.log(data);
 
 <style>
   section {
-    height: 600px;
+    height: 700px;
     overflow: hidden;
     overflow: scroll;
   }
@@ -47,7 +50,16 @@ console.log(data);
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    ...;
+    section {
+      height: 500px;
+    }
+
+    .yellow {
+      height: 280px;
+      width: 360px;
+      top: 64%;
+      left: 50%;
+    }
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -55,7 +67,6 @@ console.log(data);
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    ...;
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {

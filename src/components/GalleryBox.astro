@@ -14,9 +14,17 @@ console.log(data);
 </section>
 
 <style>
-  .galleryBox:nth-child(0) {
+  /* .galleryBox:nth-child {
+  } Hiver fat i hvert enkelt*/
+
+  section {
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: start;
   }
   .galleryBox {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +41,10 @@ console.log(data);
     text-align: center;
     transform: translate(-50%, -50%);
     display: none;
+  }
+
+  .description {
+    width: 370px; /*Hvor "bred" teksten er på siden, skal rettes efter media quer" */
   }
 
   .imgBox:hover .hide {
@@ -55,6 +67,23 @@ console.log(data);
     writing-mode: vertical-rl; /* Rotates the text vertically in the opposite direction */
     text-orientation: mixed; /* Sets the orientation of the text */
     white-space: nowrap; /* Prevents the text from wrapping */
+  }
+
+  @media only screen and (max-width: 600px) {
+    section {
+      height: 500px;
+    }
+    img {
+      width: 270px;
+    }
+    .title {
+      padding-top: 100px;
+      font-size: large;
+    }
+    .description {
+      font-size: x-small;
+      width: 200px; /*Hvor "bred" teksten er på siden, skal rettes efter media quer" */
+    }
   }
 </style>
 
@@ -79,10 +108,4 @@ console.log(data);
   description.addEventListener("mouseout", handleMouseOut);
 
   // Slideshow :'((
-
-  const slideshow = document.querySelector(".galleryBox:nth-child()");
-
-  function slideShow() {
-    slideshow.addEventListener("click");
-  }
 </script>
