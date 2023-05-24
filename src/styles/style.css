@@ -20,6 +20,8 @@ h1 {
 
 h2 {
   color: var(--primary);
+  font-family: "ivyepic", sans-serif;
+  font-weight: 600;
 }
 
 p {
@@ -27,4 +29,5 @@ p {
   color: var(--primary);
   font-weight: 300;
   font-style: normal;
+  font-size: 3.3vh;
 }

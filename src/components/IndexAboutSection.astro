@@ -1,29 +1,175 @@
 <article>
-  <div class="yellow-box">
-    <img src="public/img/nanna-test.webp" alt="#" />
-    <p>tekst her</p>
+  <div class="container">
+    <div class="first">
+      <img src="public/img/nanna/nanna-test.webp" alt="#" />
+      <div class="h2col">
+        <h2>NANNA</h2>
+        <h2>MALUNGON</h2>
+        <h2>ANDERSEN</h2>
+      </div>
+    </div>
+    <div class="second">
+      <div class="yellow-box">
+        <p class="text">
+          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
   </div>
+
+  <style>
+    p {
+      font-size: 1rem;
+    }
+    h2 {
+      color: var(--primary);
+      font-weight: 600;
+      font-style: normal;
+      font-size: 12vw;
+      position: relative;
+      left: -90px;
+      top: -100px;
+      line-height: 2rem;
+    }
+    article {
+      padding: 2rem;
+      margin-top: 9rem;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      /* gap: 3rem; */
+      flex-direction: column;
+    }
+
+    .h2col {
+      display: flex;
+      justify-content: flex-start;
+      align-items: start;
+      flex-direction: column;
+    }
+    .first {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .first h2 {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+
+    .second {
+      position: relative;
+      top: -150px;
+      left: 120px;
+    }
+
+    .text {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 2.6vh;
+    }
+
+    .yellow-box {
+      width: 80vw;
+      height: 100vh;
+      border: 4px solid #dbff01;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      top: 0px;
+      left: 80px;
+      position: relative;
+      width: auto;
+      height: 40vh;
+      z-index: 1;
+    }
+    @media only screen and (min-width: 800px) {
+      h2 {
+        color: var(--primary);
+        font-weight: 600;
+        font-style: normal;
+        font-size: 5vw;
+        position: relative;
+        left: -65px;
+        top: 5px;
+        line-height: 3.7rem;
+      }
+      article {
+        padding: 5rem;
+        margin-top: 10rem;
+      }
+
+      article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-direction: column;
+      }
+
+      .h2col {
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        flex-direction: column;
+      }
+      .first {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      .first h2 {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+      }
+
+      .second {
+        position: relative;
+        top: -200px;
+        left: 40px;
+      }
+
+      .text {
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+
+      .yellow-box {
+        width: 46vw;
+        height: 35vh;
+        border: 4px solid #dbff01;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        top: -90px;
+        left: -80px;
+        position: relative;
+        width: auto;
+        height: 350px;
+        z-index: 1;
+      }
+    }
+  </style>
 </article>
-
-<style>
-  article {
-    padding: 5rem;
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .yellow-box {
-    width: 300px;
-    height: 250px;
-    border: 4px solid #dbff01;
-  }
-
-  img {
-    top: -90px;
-    left: -120px;
-    position: relative;
-    width: auto;
-    height: 250px;
-  }
-</style>
