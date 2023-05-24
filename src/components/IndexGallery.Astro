@@ -120,11 +120,31 @@
       .carousel img {
         width: calc(100% / 2);
       }
+
+      section {
+        display: flex;
+        flex-direction: row;
+        padding: 0 35px;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        background-color: #dbff01;
+      }
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
       .carousel img {
         width: 100%;
+      }
+
+      section {
+        display: flex;
+        flex-direction: row;
+        padding: 0 35px;
+        align-items: center;
+        justify-content: center;
+        min-height: 75vh;
+        background-color: #dbff01;
       }
     }
   </style>
