@@ -1,6 +1,5 @@
 ---
 import GalleryBox from "../components/GalleryBox.astro";
-import GalleryBox2 from "../components/GalleryBox2.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
@@ -17,31 +16,29 @@ console.log(data);
 <MainLayout>
   <h1>Gallery</h1>
 
-  <!-- <GalleryBox2 /> -->
-
   <div class="yellow"></div>
-  <section class="test">
+
+  <div class="container">
     {
       data.map((show) => {
         return <GalleryBox data={show} />;
       })
     }
-  </section>
+  </div>
 </MainLayout>
 
 <style>
-  section {
-    height: 700px;
-    overflow: hidden;
-    overflow: scroll;
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
   }
   .yellow {
     border: 3px solid var(--secondary);
     position: absolute;
-    height: 450px;
-    width: 600px;
-    top: 65%;
     left: 50%;
+    height: 490px;
+    width: 640px;
+    top: 70%;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
@@ -50,23 +47,37 @@ console.log(data);
   }
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    section {
-      height: 500px;
+    .container {
+      height: 470px;
+      margin-bottom: 2rem;
     }
-
     .yellow {
       height: 280px;
       width: 360px;
       top: 64%;
-      left: 50%;
     }
   }
   /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-  }
+  /* @media only screen and (min-width: 768px) {
+    .container {
+      height: 710px;
+      margin-bottom: 6rem;
+    }
+    .yellow {
+      height: 500px;
+      width: 640px;
+      top: 50%;
+    }
+  } */
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+    .container {
+      height: 670px;
+      margin-bottom: 5rem;
+    }
+    .yellow {
+    }
   }
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
