@@ -75,7 +75,6 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 800px;
-    margin-top: 3rem;
   }
 
   .text-container {
@@ -83,7 +82,27 @@
     margin-top: 20px;
   }
 
+  p {
+    text-align: left; /* Align the text to the left */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    max-width: 65ch;
+    margin: 0 auto; /* Center the paragraph horizontally if needed */
+  }
+
+  h1 {
+    text-align: left; /* Align the text to the left */
+  }
+
   @media (min-width: 800px) {
+    h1 {
+      text-align: left; /* Align the text to the left */
+    }
+    p {
+      text-align: left; /* Align the text to the left */
+      margin-top: 2rem; /* Adjust the margin as needed */
+      max-width: 65ch;
+      margin: 0 auto; /* Center the paragraph horizontally if needed */
+    }
     .aboutsectioncontainer {
       margin-top: 20rem;
       flex-direction: row;
