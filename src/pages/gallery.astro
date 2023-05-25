@@ -13,7 +13,7 @@ const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co/rest/v1/galle
 console.log(data);
 ---
 
-<MainLayout>
+<MainLayout title="Galleri">
   <h1>Gallery</h1>
 
   <div class="yellow"></div>
@@ -28,58 +28,23 @@ console.log(data);
 </MainLayout>
 
 <style>
-  .container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-  }
   .yellow {
     border: 3px solid var(--secondary);
     position: absolute;
     left: 50%;
-    height: 490px;
+    top: 74%;
+    height: 480px;
     width: 640px;
-    top: 70%;
     transform: translate(-50%, -50%);
     z-index: -1;
   }
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 670px;
+    margin-bottom: 5rem;
+  }
   main {
     max-width: 1500px;
-  }
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-    .container {
-      height: 470px;
-      margin-bottom: 2rem;
-    }
-    .yellow {
-      height: 280px;
-      width: 360px;
-      top: 64%;
-    }
-  }
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* @media only screen and (min-width: 768px) {
-    .container {
-      height: 710px;
-      margin-bottom: 6rem;
-    }
-    .yellow {
-      height: 500px;
-      width: 640px;
-      top: 50%;
-    }
-  } */
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    .container {
-      height: 670px;
-      margin-bottom: 5rem;
-    }
-    .yellow {
-    }
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
   }
 </style>

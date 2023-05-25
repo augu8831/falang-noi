@@ -14,9 +14,6 @@ console.log(data);
 </section>
 
 <style>
-  /* .galleryBox:nth-child {
-  } Hiver fat i hvert enkelt*/
-
   section {
     display: flex;
     justify-content: center;
@@ -28,7 +25,6 @@ console.log(data);
     align-items: center;
     padding-right: 20px; /*Udligne at den er blevet rykket med H2 */
   }
-
   .imgBox {
     position: relative;
   }
@@ -44,14 +40,13 @@ console.log(data);
   .description {
     width: 370px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
   }
-
   .imgBox:hover .hide {
     display: block;
     opacity: 1;
   }
 
   .imgHover:hover {
-    opacity: 20%;
+    /* opacity: 20%; */
     transition: opacity 0.2s ease-in-out;
   }
 
@@ -60,67 +55,40 @@ console.log(data);
     height: auto;
   }
   .title {
-    padding-top: 105px;
+    padding-top: 200px;
     padding-right: 8px;
     writing-mode: vertical-rl; /* Rotates the text vertically in the opposite direction */
     text-orientation: mixed; /* Sets the orientation of the text */
     white-space: nowrap; /* Prevents the text from wrapping */
   }
-
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-    img {
-      width: 270px;
-    }
-    .title {
-      padding-top: 90px;
-      font-size: large;
-    }
-    .description {
-      font-size: x-small;
-      width: 200px; /*Hvor "bred" teksten er på siden, skal rettes efter media quer" */
-    }
-  }
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* @media only screen and (min-width: 768px) {
-    img {
-      width: 500px;
-    }
-    .title {
-      padding-top: 240px;
-    }
-    .description {
-      width: 200px; /*Hvor "bred" teksten er på siden, skal rettes efter media quer" */
-    }
-  } */
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-  }
 </style>
 
 <script>
   // Hover effekt på billede/img samt tekst/description
-  const imgHover = document.querySelector(".imgHover");
-  const description = document.querySelector(".description");
+  const imgHovers = document.querySelectorAll(".imgHover");
+  const descriptions = document.querySelectorAll(".description");
 
   function handleHover() {
-    imgHover.style.opacity = "20%";
-    console.log(handleHover);
+    imgHovers.forEach(function (imgHover) {
+      imgHover.style.opacity = "20%";
+    });
+    console.log("handleHover");
   }
 
   function handleMouseOut() {
-    imgHover.style.opacity = "100%";
-    console.log(handleMouseOut);
+    imgHovers.forEach(function (imgHover) {
+      imgHover.style.opacity = "100%";
+    });
+    console.log("handleMouseOut");
   }
 
-  imgHover.addEventListener("mouseover", handleHover);
-  imgHover.addEventListener("mouseout", handleMouseOut);
-  description.addEventListener("mouseover", handleHover);
-  description.addEventListener("mouseout", handleMouseOut);
+  imgHovers.forEach(function (imgHover) {
+    imgHover.addEventListener("mouseover", handleHover);
+    imgHover.addEventListener("mouseout", handleMouseOut);
+  });
 
-  // Slideshow :'((
+  descriptions.forEach(function (description) {
+    description.addEventListener("mouseover", handleHover);
+    description.addEventListener("mouseout", handleMouseOut);
+  });
 </script>
