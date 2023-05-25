@@ -1,11 +1,9 @@
 <!-- nav -->
 <nav class="nav">
   <ul class="list">
-    <li class="item"><a class="link"> Link 1</a></li>
-    <li class="item"><a class="link"> Link 2</a></li>
-    <li class="item"><a class="link"> Link 4</a></li>
-    <li class="item"><a class="link"> Link 5</a></li>
-    <li class="item"><a class="link"> Link 6</a></li>
+    <li class="item"><a href="/index.html">HOME</a></li>
+    <li class="item"><a href="/about.html">ABOUT</a></li>
+    <li class="item"><a href="/gallery.html">GALLERY</a></li>
   </ul>
 </nav>
 <input type="checkbox" id="navi-toggle" class="checkbox" />
@@ -13,6 +11,28 @@
   <span class="icon">&nbsp;</span>
 </label>
 <div class="background">&nbsp;</div>
+
+<!-- 
+<header>
+  <nav>
+    <div class="icons">
+      <ul class="ulicons">
+        <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
+        <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+        <li><i class="fa-brands fa-tiktok"></i></li>
+      </ul>
+    </div>
+    <div>
+      <div class="minnav">
+        <ul>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/gallery.html">GALLERY</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header> -->
 
 <style>
   /* page styling */
@@ -39,7 +59,8 @@
 
   .button {
     position: relative;
-    background-color: white;
+    background-color: #ffc8a8;
+    border: 1.5px solid red;
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
@@ -47,7 +68,6 @@
     top: 5vh;
     right: 5vw;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem black;
     text-align: center;
     cursor: pointer;
   }
@@ -59,7 +79,7 @@
     position: fixed;
     top: 5.5vh;
     right: 5.5vw;
-    background-image: radial-gradient(green, black);
+    background-color: red;
     z-index: 1000;
 
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -86,6 +106,14 @@
     width: 100%;
   }
 
+  a {
+    font-family: "ivyepic", sans-serif;
+    color: var(--primary);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+  }
+
   .item {
     margin: 1rem;
     font-size: 36px;
@@ -107,7 +135,7 @@
 
   .link:hover,
   .link:active {
-    color: lightgreen;
+    color: red;
     cursor: pointer;
   }
 
@@ -135,7 +163,7 @@
   .icon::after {
     width: 3rem;
     height: 2px;
-    background-color: gray;
+    background-color: red;
     display: inline-block;
   }
 
