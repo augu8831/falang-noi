@@ -6,7 +6,7 @@ import "../styles/style.css";
   <menu>
     <div class="logo-container">
       <a href="">
-        <img src="public/svg/header-line.svg" alt="" />
+        <img class="hideline" src="public/svg/header-line.svg" alt="" />
       </a>
     </div>
 
@@ -32,7 +32,7 @@ import "../styles/style.css";
         <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
         <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
         <li><i class="fa-brands fa-tiktok"></i></li>
-    <img class="hideline" src="public/svg/menu2.svg" alt="" />
+    <img src="public/svg/menu2.svg" alt="" />
   </div>
   </div>
   <div>
@@ -312,15 +312,23 @@ import "../styles/style.css";
     text-align: right;
     padding: 1.5rem;
   }
+
+  .icons-close ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column-reverse;
+    gap:1rem;
+    justify-content: right;
+  }
   .close-container img {
     width: 50px;
   }
 
   .sub-menu {
-    padding-top: 4.5rem;
+    padding-top: 1rem;
   }
   .sub-menu a {
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
     font-size: 55px;
     color: #ffc8a8;
     text-decoration: underline;
