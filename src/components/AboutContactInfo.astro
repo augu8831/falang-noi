@@ -29,8 +29,8 @@
   }
 
   .square3 {
-    width: 280px;
-    height: 450px;
+    width: 250px;
+    height: 420px;
     border: 3px solid var(--secondary);
     position: relative;
     margin-left: 40px;
@@ -39,17 +39,19 @@
   .title {
     margin-top: 20px; /* Adjust margin as desired */
     text-align: left; /* Align titles to the left */
+    font-size: 25px;
   }
 
   .undertitle {
     margin-bottom: 20px; /* Adjust margin as desired */
     text-align: left; /* Align undertitles to the left */
+    font-size: 15px;
   }
 
   .titles {
     position: absolute;
-    top: 40%;
-    left: 90%;
+    top: 35%;
+    left: 70%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
@@ -64,6 +66,26 @@
     .aboutcontactinfo {
       align-items: center;
       margin-top: 2rem;
+    }
+    .square3 {
+      width: 280px;
+      height: 450px;
+    }
+    .undertitle {
+      font-size: 20px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+    .titles {
+      position: absolute;
+      top: 40%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align titles to the left */
     }
   }
 </style>
