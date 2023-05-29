@@ -1,0 +1,131 @@
+---
+// import { getUser } from "./indexgallery.js";
+---
+
+<section>
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <div class="carousel">
+      <img src="public/img/indexgallery/falang-noi-espresso-martini.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-morfars-combo.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-den-blaa-cafe.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-marken-kopi.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-foraarsdag.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang_noi_fiskeren.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-indkoebstur.webp" alt="img" draggable="false" />
+
+      <img src="public/img/indexgallery/falang-noi-terrasse.webp" alt="img" draggable="false" />
+    </div>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</section>
+
+<!-- <h3>Espresso Martini</h3>
+  <h3>Morfars Combo</h3>
+  <h3>Den Blå Cafe</h3>
+  <h3>Marken</h3>
+  <h3>Forårsdag</h3>
+  <h3>Fiskeren</h3>
+  <h3>Terrasse</h3> -->
+
+<style>
+  * {
+    --primary: #ff2f01;
+    --secondary: #dbff01;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ivyepic", sans-serif;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #dbff01;
+  }
+
+  h3 {
+    font-family: mr-eaves-sans, sans-serif;
+    color: #ff2f01;
+    font-weight: 300;
+    font: 1rem;
+    font-style: normal;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    position: relative;
+  }
+
+  .wrapper i {
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    color: #ff2f01;
+    text-align: center;
+    line-height: 46px;
+    font-size: 2rem;
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .wrapper i:first-child {
+    left: -50px;
+    display: none;
+  }
+
+  .wrapper i:last-child {
+    right: -50px;
+  }
+
+  .wrapper .carousel {
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .carousel img {
+    height: 450px;
+    object-fit: contain;
+    margin-left: 14px;
+    width: calc(100% / 3);
+  }
+
+  .carousel img:first-child {
+    margin-left: 0px;
+  }
+
+  .carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging img {
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .carousel img {
+      width: calc(100% / 2);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .carousel img {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,49 +1,27 @@
 ---
 // import IndexGallery from "../components/IndexGallery.astro";
-// import IndexAboutSection from "../components/IndexAboutSection.astro";
+import IndexGallery from "../components/IndexGallery1.astro";
+import IndexAboutSection from "../components/IndexAboutSection.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import IndexHeading2 from "../components/IndexHeading2.astro";
+// import "..src/scripts/indexgallery.css";
 ---
 
-<main>
-  <MainLayout>
-    <h2>Index</h2>
-    <div class="indexheading">
-      <div class="heading1"><h1>FALANG</h1></div>
-      <div class="heading2"><h1>NOI</h1></div>
-    </div>
-  </MainLayout>
-</main>
+<MainLayout>
+  <IndexHeading2 />
+  <IndexGallery />
+  <IndexAboutSection />
+</MainLayout>
+
+<!-- <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
 
 <style>
-  main {
-    max-width: 1500px;
-  }
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-    ...;
-  }
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    h1 {
-      font-family: "ivyepic", sans-serif;
-      color: var(--primary);
-      font-weight: 600;
-      font-style: normal;
-      font-size: 18rem;
-    }
-
-    .heading2 h1 {
-      display: flex;
-      justify-content: flex-end;
-      padding-top: 0;
-    }
-  }
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    ...;
-  }
-
-  @media only screen and (min-width: 1200px) /* Extra large devices (large laptops and desktops, 1200px and up) */ {
+  * {
+    --primary: #ff2f01;
+    --secondary: #dbff01;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ivyepic", sans-serif;
   }
 </style>

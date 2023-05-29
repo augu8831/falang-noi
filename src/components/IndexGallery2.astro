@@ -1,0 +1,217 @@
+<!-- <section id="slider"> --><!-- <div class="container">
+    <div class="subcontainer">
+      <div class="slider-wrapper">
+        <div class="controller">
+          <div></div>
+          <div id="controls">
+            <button class="previous"><i class="fa-regular fa-chevron-left"></i></button>
+            <button class="next"><i class="fa-regular fa-chevron-right"></i></button>
+          </div>
+          <br />
+          <div class="my-slider">
+            <div>
+              <div class="slide">
+                <div class="slide-img img-1">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 1</h3></div>
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                <div class="slide-img img-2">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 2</h3></div>
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                <div class="slide-img img-3">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 3</h3></div>
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                <div class="slide-img img-4">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 4</h3></div>
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                <div class="slide-img img-5">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 5</h3></div>
+              </div>
+            </div>
+            <div>
+              <div class="slide">
+                <div class="slide-img img-6">
+                  <a href="#">VIEW</a>
+                </div>
+                <br />
+                <div><h3>Værk 6</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> --><!-- </section> -->
+<section></section>
+
+<script>
+  // let slider = tns({
+  //   container: ".my-slider",
+  //   "slide-By": 1,
+  //   speed: 400,
+  //   nav: false,
+  //   controlsContainer: "#control",
+  //   prevButton: ".preivous",
+  //   nextButton: ".next",
+  //   resposive: {
+  //     1600: {
+  //       items: 4,
+  //       gutter: 20,
+  //     },
+
+  //     1024: {
+  //       items: 3,
+  //       gutter: 20,
+  //     },
+
+  //     768: {
+  //       items: 2,
+  //       gutter: 20,
+  //     },
+
+  //     450: {
+  //       items: 1,
+  //     },
+  //   },
+  // });
+</script>
+
+<style>
+  .container {
+    width: 1600px;
+    margin: auto;
+  }
+
+  .subcontainer {
+    width: 85%;
+    margin: auto;
+  }
+  #controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #slider {
+    height: 500px;
+    background-color: #dbff01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  #controls i {
+    color: #ff2f01;
+    font: 1rem;
+  }
+
+  .img-1 {
+    background-image: url(public/img/dummy1.webp);
+  }
+
+  .img-2 {
+    background-image: url(public/img/dummy2.webp);
+  }
+
+  .img-3 {
+    background-image: url(public/img/dummy3.webp);
+  }
+
+  .img-4 {
+    background-image: url(public/img/dummy3.webp);
+  }
+
+  .img-5 {
+    background-image: url(public/img/dummy3.webp);
+  }
+
+  .img-6 {
+    background-image: url(public/img/dummy3.webp);
+  }
+
+  .slide-img {
+    width: 100%;
+    height: 175px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .slide-img:hover {
+    box-shadow: 0 0 0 200px rgba(255, 255, 255, 0.9) inset;
+  }
+
+  .slide-img a {
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1rem;
+    color: #ff2f01;
+    opacity: 0;
+  }
+
+  .slide-img:hover a {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .previous,
+  .next {
+    padding: 2px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.7s ease-in-out;
+  }
+
+  .previous:hover,
+  .next:hover {
+    border-color: #c22400;
+  }
+
+  @media (max-width: 1600px);
+   {
+    .container {
+      width: 100%;
+      padding: 5rem;
+    }
+  }
+</style>
