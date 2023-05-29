@@ -2,12 +2,333 @@
 const { title } = Astro.props;
 ---
 
-<h1>{title}</h1>
+<header>
+  <div class="menu-container">
+    <menu>
+      <div class="logo-container">
+          <img class="hideline" src="public/svg/header-line.svg" alt="" />
+        <h1>{title}</h1>
+      </div>
+  
+        <div class="main-menu">
+          <div class="icons">
+            <ul>
+              <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
+              <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+              <li><i class="fa-brands fa-tiktok"></i></li>
+            <li class="burger-menu"><img src="public/svg/menu1.svg" alt="" /></li>
+          </ul>
+          </div>
+      </menu>
+    </div>
+  
+  
+    <div class="overlaymenu-container">
+        <div class="icons-close">
+          <ul class="ulicons">
+            <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
+            <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
+            <li><i class="fa-brands fa-tiktok"></i></li>
+          </ul>
+      <li class="burger-menu2"><img src="public/svg/menu2.svg" alt="" /></li>
+    </div>
+    
+    <div>
+      <ul class="sub-menu">
+        <li><a href="/index.html">HOME</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/gallery.html">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+  </header>
+  
+  <style>
 
-<style>
   h1 {
     position: absolute;
-    margin-left: 2.5rem;
+    margin-left: 1.3rem;
     top: 1.5rem;
   }
-</style>
+  
+  .hideline {
+    display: block;
+  }
+  
+  .burger-menu, .burger-menu2 {
+  cursor: pointer;
+  }
+  
+  .menu-container {
+    margin-bottom: 7rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    font-family: "ivyepic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .icons ul {
+    list-style-type: none;
+    display: flex;
+    gap:1rem;
+  }
+  
+  .icons-close {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    list-style: none;
+    padding: 10px 20px;
+    margin-bottom: 0rem;
+  }
+
+  
+  .ulicons .fa-brands, .fa-instagram, .fa-facebook-f, .fa-tiktok {
+    color:#ffc8a8;
+  }
+
+    /* .ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      } */
+    .fa-brands {
+        font-size: 1.5rem;
+      }
+    .fa-instagram {
+        color: var(--primary);
+      }
+    .fa-facebook-f {
+        color: var(--primary);
+      }
+  
+    .fa-tiktok {
+        color: var(--primary);
+      }
+    .menu-container {
+      padding: 10px 20px;
+    }
+  
+    menu {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .logo-container img {
+      padding-top: 0.8rem;
+      height: 90px;
+    }
+    .main-menu {
+      list-style: none;
+      display: flex;
+    }
+     .main-menu a {
+      padding-top: 1.5rem;
+      display: block;
+  
+     }
+  
+     .main-menu i {
+      padding-top: 1.5rem;
+      display: block;
+  
+     }
+      
+    .overlaymenu-container a {
+      padding: 20px 25px;
+      display: block;
+    }
+    li img {
+      width: 50px;
+    }
+    .burger-menu, .burger-menu2{
+      padding: 15px 25px;
+    }
+  
+    .overlaymenu-container {
+      height: 100vh;
+      width: 570px;
+      background-color: var(--primary);
+      position: fixed;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      transform: translateX(100%);
+      transition: transform 0.2s;
+      z-index: 99;
+    }
+    body .open {
+      transform: translateX(0);
+    }
+  
+    .icons-close ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .sub-menu {
+      padding-top: 4.5rem;
+    }
+    .sub-menu a {
+      padding-left: 3rem;
+      font-size: 55px;
+      color: #ffc8a8;
+      text-decoration: underline;
+      text-underline-offset: 1.5rem;
+      -webkit-text-stroke: 3px var(--primary)
+      letter-spacing: 2px;
+    }
+    /* .sub-menu a:hover {
+      color: var(--secondary);
+    } */
+  
+  
+  @media screen and (max-width: 600px) {
+    /* nav {
+      display: flex;
+      padding: 1.5rem;
+      justify-content: end;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-direction: row;
+    } */
+  
+  
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      font-family: "ivyepic", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+  
+    .icons-close ul {
+      display: flex;
+      flex-direction: column-reverse;
+      list-style: none;
+      gap: 10px;
+
+    }
+  
+    .icons ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 10px;
+        padding-left: 2.5rem;
+      }
+
+      .fa-brands {
+        font-size: 1.5rem;
+      }
+      .fa-instagram {
+        color: var(--primary);
+      }
+      .fa-facebook-f {
+        color: var(--primary);
+        padding-left: 3px;
+      }
+  
+      .fa-tiktok {
+        color: var(--primary);
+      }
+    .menu-container {
+      padding: 10px 20px;
+      margin-bottom: 0rem;
+    }
+  
+    menu {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .logo-container img {
+      padding-top: 0.8rem;
+      height: 90px;
+    }
+    .main-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+     .main-menu a {
+      padding-top: 0.5rem;
+      display: block;
+  
+     }
+  
+     .main-menu i {
+      padding-top: 0.5rem;
+      display: block;
+  
+     }
+      
+    .overlaymenu-container a, .overlaymenu-container i {
+      padding: 20px 25px;
+      display: block;
+    }
+    li img {
+      width: 50px;
+    }
+    .burger-menu, .burger-menu2 {
+      padding: 15px 25px;
+    }
+  
+    .overlaymenu-container {
+      height: 100vh;
+      width: 100vw;
+      background-color: var(--primary);
+      position: fixed;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      transform: translateX(100%);
+      transition: transform 0.2s;
+      z-index: 99;
+    }
+    body .open {
+      transform: translateX(0);
+    }
+  
+
+  
+    .sub-menu {
+      padding-top: 1rem;
+    }
+    .sub-menu a {
+      /* padding-left: 3rem; */
+      font-size: 55px;
+      color: #ffc8a8;
+      text-decoration: underline;
+      text-underline-offset: 1.5rem;
+      -webkit-text-stroke: 3px var(--primary)
+      letter-spacing: 2px;
+    }
+    /* .sub-menu a:hover {
+      color: var(--secondary);
+    } */
+
+  
+  }
+    
+  </style>
+  
+  <script>
+    const overlaymenu = document.querySelector(".overlaymenu-container");
+    const burgermenu = document.querySelector(".burger-menu");
+    const close = document.querySelector(".burger-menu2");
+  
+    burgermenu.addEventListener("click", function () {
+      overlaymenu.classList.add("open");
+    });
+  
+    close.addEventListener("click", function () {
+      overlaymenu.classList.remove("open");
+    });
+  </script>

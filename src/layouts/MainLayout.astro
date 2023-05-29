@@ -1,5 +1,4 @@
 ---
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/style.css";
 
@@ -18,7 +17,6 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Header />
     <main>
       <slot />
     </main>
@@ -29,5 +27,6 @@ const { title } = Astro.props;
 <style>
   main {
     max-width: 1500px;
+    overflow: hidden;
   }
 </style>
