@@ -14,16 +14,13 @@ console.log(data);
 </section>
 
 <style>
-  section {
-    display: flex;
-    justify-content: center;
-    scroll-snap-align: start;
-  }
   .galleryBox {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 20px; /*Udligne at den er blevet rykket med H2 */
+    scroll-snap-align: start;
+    position: relative;
   }
   .imgBox {
     position: relative;
@@ -46,7 +43,6 @@ console.log(data);
   }
 
   .imgHover:hover {
-    /* opacity: 20%; */
     transition: opacity 0.2s ease-in-out;
   }
 
@@ -60,6 +56,22 @@ console.log(data);
     writing-mode: vertical-rl; /* Rotates the text vertically in the opposite direction */
     text-orientation: mixed; /* Sets the orientation of the text */
     white-space: nowrap; /* Prevents the text from wrapping */
+  }
+
+  @media only screen and (max-width: 800px) {
+    .description {
+      width: 260px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
+    }
+    img {
+      width: 315px;
+      height: auto;
+    }
+    .title {
+      font-size: medium;
+      padding-top: 170px;
+    }
+    .hide {
+      font-size: small;
   }
 </style>
 

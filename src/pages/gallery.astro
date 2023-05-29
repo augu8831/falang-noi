@@ -16,7 +16,9 @@ console.log(data);
 <MainLayout title="Galleri">
   <h1>Gallery</h1>
 
-  <div class="yellow"></div>
+  <div class="yellowcontainer">
+    <div class="yellow"></div>
+  </div>
 
   <div class="container">
     {
@@ -28,23 +30,43 @@ console.log(data);
 </MainLayout>
 
 <style>
-  .yellow {
-    border: 3px solid var(--secondary);
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    height: 480px;
-    width: 640px;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
   .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 670px;
     margin-bottom: 5rem;
+    position: relative;
   }
-  main {
-    max-width: 1500px;
+
+  .yellowcontainer {
+    display: flex;
+    justify-content: center;
+  }
+  .yellow {
+    border: 3px solid var(--secondary);
+    margin-top: 6rem;
+    width: 630px;
+    height: 470px;
+    position: absolute;
+
+    /* position: absolute;
+    left: 50%;
+    top: 70%;
+    height: 480px;
+    width: 640px;
+    transform: translate(-50%, -50%);
+    z-index: -1; */
+  }
+
+  @media only screen and (max-width: 800px) {
+    .yellow {
+      margin-top: 4.5rem;
+      width: 400px;
+      height: 330px;
+    }
+    .container {
+      height: 451px;
+      margin-bottom: 3.5rem;
+    }
   }
 </style>
