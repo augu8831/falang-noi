@@ -1,0 +1,130 @@
+<div class="aboutsectioncontainer">
+  <div class="squarecontainer2">
+    <div class="image-container">
+      <img src="public/img/falang-noi-marken.webp" alt="Photo" />
+    </div>
+    <div class="square2"></div>
+  </div>
+
+  <div class="aboutsection">
+    <div class="text-container">
+      <h1>NANNA MALUMGON</h1>
+      <p>
+        Falang Noi - noget som jeg tit er blevet kaldt gennem min opvækst, betyder “Den lille fremmede” på thai. Det er noget, som jeg også tit har følt mig som, både i Danmark, hvor jeg er født, og i Thailand, hvor min mor kommer fra. Da jeg var
+        mindre, havde jeg svært ved at finde hoved og hale i to så vidt forskellige kulturer, og så det mere som en ulempe frem for fordel.
+      </p>
+      <br />
+      <p>
+        I takt med at jeg er blevet ældre, og har fået en dybere forståelse for, hvor jeg kommer fra - og specielt mine rødder i Thailand, er mit syn vendt. Nu kommer det meste af min inspiration fra en kombination af netop dette, "the best of both
+        worlds". Denne dobbeltbetydning af “noget fremmed” forsøger jeg at vise gennem mine værker. Her blander jeg Thailands farver og mange indtryk med Danmarks minimalisme og byliv. Disse kontraster fører til værker, der ikke er perfekte, men
+        fortæller gode historier.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  main {
+    max-width: 1500px;
+  }
+
+  .squarecontainer2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 70%;
+    margin-top: 3rem;
+  }
+
+  .square2 {
+    width: 350px;
+    height: 300px;
+    border: 3px solid var(--secondary);
+  }
+
+  /* aboutsection */
+  .aboutsectioncontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .aboutsection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+  }
+
+  .text-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  p {
+    text-align: left; /* Align the text to the left */
+    margin-top: 2rem; /* Adjust the margin as needed */
+    max-width: 65ch;
+    margin: 0 auto; /* Center the paragraph horizontally if needed */
+  }
+
+  h1 {
+    text-align: left; /* Align the text to the left */
+  }
+
+  @media (min-width: 800px) {
+    h1 {
+      text-align: left; /* Align the text to the left */
+    }
+    p {
+      text-align: left; /* Align the text to the left */
+      margin-top: 2rem; /* Adjust the margin as needed */
+      max-width: 65ch;
+      margin: 0 auto; /* Center the paragraph horizontally if needed */
+    }
+    .aboutsectioncontainer {
+      margin-top: 20rem;
+      flex-direction: row;
+      justify-content: space-evenly; /* Updated to create even space on both sides */
+      align-items: flex-start;
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
+
+    .square2 {
+      width: 450px;
+      height: 400px;
+    }
+
+    .aboutsection {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    img {
+      width: 80%;
+      margin-top: 0;
+    }
+  }
+</style>
