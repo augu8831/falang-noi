@@ -1,0 +1,106 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<section class="galleryBox">
+  <h2 class="title">{data.title}</h2>
+  <div class="imgBox">
+    <img class="imgHover" src={"img/gallery/" + data.image} alt="Falang Noi Galleri" />
+    <div class="hide">
+      <p class="description">{data.description}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .galleryBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px; /*Udligne at den er blevet rykket med H2 */
+    scroll-snap-align: start;
+    position: relative;
+  }
+  .imgBox {
+    position: relative;
+  }
+  .hide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .description {
+    width: 370px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
+  }
+  .imgBox:hover .hide {
+    display: block;
+    opacity: 1;
+  }
+
+  .imgHover:hover {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  img {
+    width: 470px;
+    height: auto;
+  }
+  .title {
+    padding-top: 200px;
+    padding-right: 8px;
+    writing-mode: vertical-rl; /* Rotates the text vertically in the opposite direction */
+    text-orientation: mixed; /* Sets the orientation of the text */
+    white-space: nowrap; /* Prevents the text from wrapping */
+  }
+
+  @media only screen and (max-width: 800px) {
+    .description {
+      width: 260px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
+    }
+    img {
+      width: 315px;
+      height: auto;
+    }
+    .title {
+      font-size: medium;
+      padding-top: 170px;
+    }
+    .hide {
+      font-size: small;
+  }
+</style>
+
+<script>
+  // Hover effekt på billede/img samt tekst/description
+  const imgHovers = document.querySelectorAll(".imgHover");
+  const descriptions = document.querySelectorAll(".description");
+
+  function handleHover() {
+    imgHovers.forEach(function (imgHover) {
+      imgHover.style.opacity = "20%";
+    });
+    console.log("handleHover");
+  }
+
+  function handleMouseOut() {
+    imgHovers.forEach(function (imgHover) {
+      imgHover.style.opacity = "100%";
+    });
+    console.log("handleMouseOut");
+  }
+
+  imgHovers.forEach(function (imgHover) {
+    imgHover.addEventListener("mouseover", handleHover);
+    imgHover.addEventListener("mouseout", handleMouseOut);
+  });
+
+  descriptions.forEach(function (description) {
+    description.addEventListener("mouseover", handleHover);
+    description.addEventListener("mouseout", handleMouseOut);
+  });
+</script>

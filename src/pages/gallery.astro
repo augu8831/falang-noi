@@ -1,79 +1,72 @@
 ---
-// import GalleryBox from "../components/GalleryBox.astro";
-// import SiteHeader from "../components/SiteHeader.astro";
+import GalleryBox from "../components/GalleryBox.astro";
+import SiteHeader from "../components/SiteHeader.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co", {
+
+const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co/rest/v1/gallery", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyZm1mbm13bmx0a21ubHdoY2l3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ0MDYzNDgsImV4cCI6MTk5OTk4MjM0OH0.V3uFzN9XdkUcR0J0uVy7DJG-lYVXGe84JyIA1YqJ3VQ",
   },
 }).then((res) => res.json());
 
+console.log(data);
 ---
 
-<MainLayout title="Gallery">
-  <h2>Gallery</h2>
-  <section class="galleryBox">
-    <div class="slideshow-container">
-      <div class="galleryImg slide">
-        <img src="public/img/falang-noi-marken.webp" alt="Slide 1 - Marken" />
-      </div>
-      <div class="galleryImg slide">
-        <img src="public/img/falang-noi-marken.webp" alt="Slide 2 - Marken" />
-      </div>
-    </div>
-    <h3>RISMARKEN</h3>
-  </section>
+<MainLayout title="Galleri">
+  <h1>Gallery</h1>
+
+  <div class="yellowcontainer">
+    <div class="yellow"></div>
+  </div>
+
+  <div class="container">
+    {
+      data.map((show) => {
+        return <GalleryBox data={show} />;
+      })
+    }
+  </div>
 </MainLayout>
 
 <style>
-  .galleryBox {
-    border-color: (var) --secondary;
-  }
-
-  .slideshow-container {
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 670px;
+    margin-bottom: 5rem;
     position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
   }
 
-  .slide {
+  .yellowcontainer {
+    display: flex;
+    justify-content: center;
+  }
+  .yellow {
+    border: 3px solid var(--secondary);
+    margin-top: 6rem;
+    width: 630px;
+    height: 470px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: opacity: 0.5 ease-in-out;
+
+    /* position: absolute;
+    left: 50%;
+    top: 70%;
+    height: 480px;
+    width: 640px;
+    transform: translate(-50%, -50%);
+    z-index: -1; */
   }
 
-  .slide.active {
-    opacity: 1;
-  }
-
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  @media only screen and (max-width: 800px) {
+    .yellow {
+      margin-top: 4.5rem;
+      width: 400px;
+      height: 330px;
+    }
+    .container {
+      height: 451px;
+      margin-bottom: 3.5rem;
+    }
   }
 </style>
-
-<script>
-  var slides = document.querySelector('.slide');
-  var currentSlide = 0;
-
-  function showSlide(slideIndex) {
-    slides[currentSlide].classList.remove('active');
-    slides[slideIndex].classList.add('active');
-    currentSlide = slideIndex;
-  }
-
-  function nextSlide() {
-    var nextSlideIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextSlideIndex);
-  }
-
-  // Automatically advance to the next slide every 5 seconds
-  setInterval(nextSlide, 5000);
-</script>
