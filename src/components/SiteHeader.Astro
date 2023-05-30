@@ -5,7 +5,7 @@ const { title } = Astro.props;
 <header>
   <div class="menu-container">
     <div class="logo-container">
-      <img class="hideline" src="public/svg/header-line.svg" alt="" />
+      <img class="hideline" src="../svg/header-line.svg" alt="" />
       <h1>{title}</h1>
     </div>
 
@@ -15,7 +15,7 @@ const { title } = Astro.props;
           <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
           <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
           <li><i class="fa-brands fa-tiktok"></i></li>
-          <li class="burger-menu"><img src="public/svg/menu1.svg" alt="" /></li>
+          <li class="burger-menu"><img src="../svg/menu1.svg" alt="" /></li>
         </ul>
       </div>
     </div>
@@ -27,7 +27,7 @@ const { title } = Astro.props;
         <li><a href="https://www.instagram.com/falang.noi/?hl=da" class="fa-brands fa-instagram"></a></li>
         <li><a href="#" class="fa-brands fa-facebook-f"></a></li>
         <li><i class="fa-brands fa-tiktok"></i></li>
-        <li class="burger-menu2"><img src="public/svg/menu2.svg" alt="" /></li>
+        <li class="burger-menu2"><img src="../svg/menu2.svg" alt="" /></li>
       </ul>
     </div>
 
@@ -179,44 +179,13 @@ const { title } = Astro.props;
 
   @media screen and (max-width: 600px) {
     /* ALT menu */
-    a {
-      text-decoration: none;
-      color: var(--primary);
-      font-family: "ivyepic", sans-serif;
-      font-weight: 600;
-      font-style: normal;
-    }
 
-    .icons-close ul {
+    /* COMPUTER PÅ SIDEN menu/ MENU CONTAINER DEL 1 */
+    .icons ul {
       display: flex;
       flex-direction: column-reverse;
       list-style: none;
       gap: 10px;
-    }
-
-    .icons ul {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      gap: 10px;
-      padding-left: 2.5rem;
-    }
-
-    .fa-brands {
-      font-size: 1.5rem;
-    }
-
-    .fa-instagram {
-      color: var(--primary);
-    }
-
-    .fa-facebook-f {
-      color: var(--primary);
-      padding-left: 3px;
-    }
-
-    .fa-tiktok {
-      color: var(--primary);
     }
 
     .menu-container {
@@ -245,19 +214,31 @@ const { title } = Astro.props;
       display: block;
     }
 
+    .fa-instagram {
+      color: var(--primary);
+    }
+
+    .fa-facebook-f {
+      color: var(--primary);
+      padding-left: 3px;
+    }
+
+    .fa-tiktok {
+      color: var(--primary);
+    }
+
+    /* COMPUTER PÅ RØD ÅBEN menu/ OVERLAY DEL 2 */
+    .icons-close ul {
+      display: flex;
+      flex-direction: column-reverse;
+      list-style: none;
+      gap: 10px;
+    }
+
     .overlaymenu-container a,
     .overlaymenu-container i {
       padding: 20px 25px;
       display: block;
-    }
-
-    li img {
-      width: 50px;
-    }
-
-    .burger-menu,
-    .burger-menu2 {
-      padding: 15px 25px;
     }
 
     .overlaymenu-container {
