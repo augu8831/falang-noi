@@ -16,11 +16,12 @@
   .aboutcontactinfo {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    /* justify-content: flex-end;
+    align-items: flex-start; */
+    /* align-items: center; */
     height: 50vh;
     position: relative;
-    margin-top: 25rem;
+    /* margin-top: 5rem; */
   }
 
   .squarecontainer3 {
@@ -33,7 +34,7 @@
     height: 420px;
     border: 3px solid var(--secondary);
     position: relative;
-    margin-left: 40px;
+    /* margin-left: 40px; */
   }
 
   .title {
@@ -50,12 +51,16 @@
 
   .titles {
     position: absolute;
-    top: 35%;
-    left: 70%;
+    top: 40%;
+    left: 65%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align titles to the left */
+  }
+
+  h2 {
+    font-weight: 300;
   }
 
   main {
@@ -64,8 +69,10 @@
 
   @media (min-width: 800px) {
     .aboutcontactinfo {
-      align-items: center;
-      margin-top: 2rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+      /* margin-top: 2rem; */
     }
     .square3 {
       width: 280px;
@@ -85,6 +92,7 @@
       transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
+      justify-content: left;
       align-items: flex-start; /* Align titles to the left */
     }
   }
