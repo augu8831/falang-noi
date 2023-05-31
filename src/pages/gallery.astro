@@ -1,6 +1,6 @@
 ---
 import GalleryBox from "../components/GalleryBox.astro";
-import SiteHeader from "../components/SiteHeader.astro";
+import SiteHeader2 from "../components/SiteHeader2.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 const data = await fetch("https://frfmfnmwnltkmnlwhciw.supabase.co/rest/v1/gallery", {
@@ -14,7 +14,7 @@ console.log(data);
 ---
 
 <MainLayout title="Galleri">
-  <SiteHeader title="GALLERY" />
+  <SiteHeader2 title="GALLERY" />
 
   <div class="yellowcontainer">
     <div class="yellow"></div>

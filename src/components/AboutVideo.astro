@@ -1,9 +1,13 @@
 <div class="squarecontainer">
   <div class="square"></div>
   <div class="videocontainer">
-    <video class="video" controls>
-      <source src="../video/testvideo.mp4" type="video/mp4" />
-    </video>
+    <iframe
+      class="video"
+      src="https://www.youtube-nocookie.com/embed/JOvplENMcfc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
     <div class="arrow-down"></div>
   </div>
 </div>
@@ -13,6 +17,7 @@
     width: 400px;
     height: 250px;
   }
+
   .arrow-down {
     width: 15px;
     height: 15px;
@@ -52,15 +57,15 @@
   @media (min-width: 800px) {
     .video {
       width: 100%;
-      max-width: 1200px;
-      height: auto;
+      /* max-width: 1200px; */
+      height: 100vh;
       margin: 0 auto; /* Center the video horizontally */
-      padding: 0 20px; /* Add padding to create space on the left and right sides */
       display: block; /* Ensure the video is displayed as a block element */
     }
 
     .squarecontainer {
       justify-content: center;
+      height: 80vh;
     }
 
     .videocontainer {
@@ -69,6 +74,7 @@
       margin-top: 0;
       margin-left: 0;
     }
+
     .arrow-down {
       width: 20px;
       height: 20px;
@@ -80,9 +86,5 @@
       left: 50%;
       margin-top: 180px;
     }
-  }
-
-  main {
-    max-width: 1500px;
   }
 </style>
