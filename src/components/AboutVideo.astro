@@ -8,10 +8,20 @@
 </div>
 
 <style>
-   {
+  .video {
     width: 400px;
     height: 250px;
     position: relative;
+  }
+
+  .videocontainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 250px;
+    z-index: 1;
   }
 
   .squarecontainer {
@@ -27,16 +37,6 @@
     width: 300px;
     height: 320px;
     border: 3px solid var(--secondary);
-  }
-
-  .videocontainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 250px;
-    z-index: 1;
   }
 
   @media (min-width: 800px) {
