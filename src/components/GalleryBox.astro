@@ -61,8 +61,9 @@ console.log(data);
 
   @media only screen and (max-width: 800px) {
     .description {
-      font-size: small;
-      width: 260px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
+      font-size: 1rem;
+      font-weight: 400;
+      width: 230px; /*Hvor "bred" teksten er på siden, skal rettes efter media-query" */
     }
     img {
       width: 300px;
@@ -86,7 +87,7 @@ console.log(data);
 
   function handleHover() {
     imgHovers.forEach(function (imgHover) {
-      imgHover.style.opacity = "20%";
+      imgHover.style.opacity = "15%";
     });
     console.log("handleHover");
   }

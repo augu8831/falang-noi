@@ -30,3 +30,13 @@ p {
   font-style: normal;
   font-size: 1.2rem;
 }
+
+.link {
+  color: var(--primary);
+  font-weight: 400;
+  text-decoration-thickness: 1.5px;
+}
+
+.link:visited {
+  color: var(--primary);
+}
